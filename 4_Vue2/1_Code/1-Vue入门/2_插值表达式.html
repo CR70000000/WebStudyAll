@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2_插值表达式</title>
+</head>
+
+<body>
+  <!-- 
+    插值表达式：Vue的一种模板语法
+    作用：利用表达式进行插值渲染
+    语法：{{ 表达式 }}
+   -->
+  <div id="app">
+    <p>{{ msg }}</p>
+    <p>{{ msg.toUpperCase() }}</p>
+    <p>{{ msg + '插值表达式应用' }}</p>
+    <p>{{ '姓名:' + person.name}}</p>
+    <p>{{ '年龄:' + person.age}}</p>
+
+
+  </div>
+  <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        msg: 'Hello Vue!',
+        person: {
+          name: 'PYY',
+          age: 18
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
